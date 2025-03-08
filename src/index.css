@@ -1,0 +1,118 @@
+body{
+  background-color: hsl(50, 87%, 64%);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-time{
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1rem solid hsl(0, 0%, 53%);
+  border-radius: 100rem;
+  width: 36rem;
+  height: 9rem;
+  font-family: monospace;
+}
+
+.input-time input{
+  text-align: center;
+  font-size: 4rem;
+  max-width: 8rem;
+  border: none;
+  outline: none;
+}
+
+::placeholder{
+  color: hsl(0, 0%, 73%);
+}
+
+.take-input{
+  display: flex;
+  align-items: center;
+}
+
+.take-input button{
+  height: 3rem;
+  width: 9rem;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background-color: hsl(207, 44%, 65%);
+  border-radius: 10px;
+  border: none;
+}
+
+.take-input button:hover{
+  cursor: pointer;
+  background-color: hsl(207, 44%, 60%);
+}
+
+.ml{
+  font-size: 2rem;
+}
+
+.buttons{
+  margin-top: 7rem;
+  margin-right: 9rem;
+  width: 40rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons button{
+  height: 4.5rem;
+  width: 10rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.start-btn{
+  background-image: linear-gradient(green, hsl(50, 90%, 40%));
+}
+
+.pause-btn{
+  background-color:  #c62626;
+}
+
+.continue-btn{
+  background-color: green;
+}
+
+.start-btn:hover{
+  cursor: pointer;
+  background-image: linear-gradient( hsl(50, 90%, 40%), green);
+}
+
+.pause-btn:hover{
+  cursor: pointer;
+  background-color:  hsl(0, 68%, 41%);
+}
+
+.continue-btn:hover{
+  cursor: pointer;
+  background-color: hsl(120, 73%, 20%);
+}
+
+.reset-btn{
+  background-color: hsl(222, 24%, 42%);
+}
+
+.reset-btn:hover{
+  cursor: pointer;
+  background-color: hsl(222, 24%, 32%);
+}
+
