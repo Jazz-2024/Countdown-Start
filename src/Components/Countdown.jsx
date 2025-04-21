@@ -24,6 +24,11 @@ function Countdown() {
     const userInputRef = useRef(null)
     const intervalIdRef = useRef(null)
     const dateRef = useRef(null)
+
+    const [showMilliZ, setShowMilliZ]  = useState(0)
+    const [showSecondZ, setShowSecondZ] = useState(0)
+    const [showMinuteZ, setShowMinuteZ] = useState(0)
+    const [showHourZ, setShowHourZ] = useState(0)
     // const [increaseTime, setIncreaseTime] = useState(0)
 
 
@@ -162,21 +167,23 @@ function Countdown() {
     // console.log(isRunning)
 
 
-    const showMilli = (elapsedTime % 1000)
-    const showMilliZ = String(showMilli).padStart(3,0)
-
-    const showSecond = Math.floor(((elapsedTime / 1000) % 60))
-    const showSecondZ = String(showSecond).padStart(2,0)
-
-    const showMinute = Math.floor(((elapsedTime / (1000 * 60)) % 60))
-    const showMinuteZ = String(showMinute).padStart(2,0)
-
-    const showHour = Math.floor(elapsedTime / (1000*60*60))
-    const showHourZ = String(showHour).padStart(2,0)
+    useEffect(()=>{
+        const showMilli = (elapsedTime % 1000)
+        setShowMilliZ(String(showMilli).padStart(3,0))
+    
+        const showSecond = Math.floor(((elapsedTime / 1000) % 60))
+        setShowSecondZ(String(showSecond).padStart(2,0))
+    
+        const showMinute = Math.floor(((elapsedTime / (1000 * 60)) % 60))
+        setShowMinuteZ(String(showMinute).padStart(2,0))
+    
+        const showHour = Math.floor(elapsedTime / (1000*60*60))
+        setShowHourZ(String(showHour).padStart(2,0))
+    }, [elapsedTime])
 
 
     // console.log(showSecondZ)
-    // console.log(showHourZ)
+    console.log(showHourZ)
 
 
 
